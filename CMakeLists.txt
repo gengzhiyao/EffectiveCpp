@@ -5,3 +5,5 @@ project(EffectiveCpp)
 add_subdirectory(Item28)    #避免返回handles指向对象内部的成分
 
 add_subdirectory(Item30)    #透彻了解inlining的里里外外
+
+add_subdirectory(Item33)    #避免隐藏继承下来的名称
