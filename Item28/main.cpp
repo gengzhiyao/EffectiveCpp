@@ -76,6 +76,8 @@ int main ()
     rect.GetLeftTop ().SetX ( 2 );
 
     std::cout << rect.GetLeftTop ().GetX() << std::endl;
+
+    return 0;
 }
 
 class GUIObject
