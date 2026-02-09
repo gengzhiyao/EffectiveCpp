@@ -50,7 +50,7 @@ int main ()
 {
     Derived d;
     Base* b = &d;
-    std::cout << "Redefine a non-virtual function mf1() in derived class which may make mistakes." << std::endl;
+    std::cout << "Redefine a non-virtual function mf1() in derived class which may make mistakes. Also is statically bound! " << std::endl;
     b->mf1 ();
     d.mf1 ();
     Derived* d1 = std::addressof ( d );
