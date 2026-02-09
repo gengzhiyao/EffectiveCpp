@@ -18,9 +18,18 @@
 
  /**
   * !避免隐藏继承下来的名称
-  *
+  * 无论变量或者是函数，名称的隐藏发生在小范围作用域定义了大范围作用域中同名的名称，不论变量的类型是否相同，也不论函数的签名是否相同，会一律覆盖
+  * Notion: 最为明显的一点是，小范围作用域中的函数，会隐藏大范围作用域中一切重载函数 见class Derived & class Base之间发生的事情
+  * 看完后回到这里：
+  * 为什么C++这样设计？ --为了防止库或者框架的使用者在派生类中继承父类的函数成员时，定义了同名函数之后还是会把重载函数带到子类的作用域范围之内造成的代码膨胀
+  * 但有时候，我们确实是仅仅需要父类中的某一个重载函数，如何做呢？
+  * using Base::mf1
+  * 
   */
 
+
+#pragma region ADL
+  //*===========================================================Program Section
 namespace N {
     class A { };
     void f ( A ) { std::cout << "N::f" << std::endl; }
@@ -62,9 +71,41 @@ int WithUsing ()
     f ( a );
     return 0;
 }
+//*=============================================================
+#pragma endregion
+
+class Base
+{
+private:
+    int x;
+public:
+    virtual void mf1 () = 0;
+    virtual void mf1 ( int );
+    virtual void mf2 ();
+    void mf3 ();
+    void mf3 ( double );
+};
+
+class Derived :public Base
+{
+public:
+    virtual void mf1 ();    //!会隐藏父类中的virtual void mf1()和virtual void mf1(int) 
+    void mf4 ();
+    void mf3 ();
+
+public:
+    //Optional using Base::mf1;   该选项会将父类中所有重载函数引入到子类作用域中，并且使子类可以只重写其中的一个
+
+    
+};
 
 int main ()
 {
-    WithoutUsing ();
+    WithoutUsing ();    // ADL
+
+    Derived d;
+    // d.mf1 ( 5 );  // [ERROR] 编译报错，找不到父类中的带参函数
+    // d.mf3 ( 5 );  // 同理
+
     return 0;
 }
