@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 4.0)
 
 project(EffectiveCpp)
 
+add_subdirectory(Item01)    #将C++看做是一个语言联邦
+add_subdirectory(Item02)    #尽量以const enum inline 替换define
+
 add_subdirectory(Item28)    #避免返回handles指向对象内部的成分
 
 add_subdirectory(Item30)    #透彻了解inlining的里里外外
