@@ -14,6 +14,15 @@
  * 3. 对于宏函数，使用inline函数进行替换
  */
 
+class Important
+{
+public: //static & const 成员变量
+    static const int value = 5; //!这是唯一可行的类内声明并定义，因为编译器会将其视作编译期常量，引发常量折叠，直接替换，类似#define，但是当对该变量取地址时，必须在cpp文件中再次定义
+    // static const /*non-int type*/  //对于static const 修饰的非**整型**变量，必须cpp文件中定义
+    // static non-const 需要再cpp文件中进行定义
+    //?static constexpr //这种类型必须在类内声明并初始化
+};
+
 class GamePlayer
 {
 private:
