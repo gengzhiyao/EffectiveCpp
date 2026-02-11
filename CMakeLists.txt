@@ -4,6 +4,7 @@ project(EffectiveCpp)
 
 add_subdirectory(Item01)    #将C++看做是一个语言联邦
 add_subdirectory(Item02)    #尽量以const enum inline 替换define
+add_subdirectory(Item03)    #尽可能使用const
 
 add_subdirectory(Item28)    #避免返回handles指向对象内部的成分
 
