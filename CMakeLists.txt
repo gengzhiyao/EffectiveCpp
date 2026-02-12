@@ -9,8 +9,8 @@ add_subdirectory(Item02)    #尽量以const enum inline 替换define
 add_subdirectory(Item03)    #尽可能使用const
 add_subdirectory(Item04)    #确定对象在使用前已经先初始化
 add_subdirectory(Item05)    #了解C++默默编写并调用哪些函数
-
-
+add_subdirectory(Item06)    #若不想使用编译器生成的特种成员函数，就明确拒绝
+add_subdirectory(Item07)    #为多态基类声明virtual析构函数
 
 
 
