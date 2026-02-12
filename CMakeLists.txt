@@ -14,6 +14,8 @@ add_subdirectory(Item07)    #为多态基类声明virtual析构函数
 
 add_subdirectory(Item09)    #绝不要在构造函数和析构函数中调用虚函数
 add_subdirectory(Item10)    #令operator=返回自身的引用
+
+add_subdirectory(Item12)    #复制对象时切记复制包含基类在内的每个成分
 add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
 
 
