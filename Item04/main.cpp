@@ -36,7 +36,7 @@ public:
 
 Directory tempDir /*(Args)*/;
 
-//! 解决办法也挺简单：reference-returning
+//! 解决办法也挺简单：reference-returning   (呼应Item21)
 // 将以上静态变量以函数进行包裹
 FileSystem& tfs ()
 {
