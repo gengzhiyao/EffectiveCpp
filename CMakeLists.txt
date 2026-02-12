@@ -18,7 +18,7 @@ add_subdirectory(Item10)    #令operator=返回自身的引用
 add_subdirectory(Item12)    #复制对象时切记复制包含基类在内的每个成分
 add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
 
-
+add_subdirectory(Item26)    #尽可能延后变量定义式的出现时间
 add_subdirectory(Item27)    #尽量少做转型动作
 add_subdirectory(Item28)    #避免返回handles指向对象内部的成分
 
