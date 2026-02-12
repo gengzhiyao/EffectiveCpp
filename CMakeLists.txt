@@ -12,8 +12,8 @@ add_subdirectory(Item05)    #了解C++默默编写并调用哪些函数
 add_subdirectory(Item06)    #若不想使用编译器生成的特种成员函数，就明确拒绝
 add_subdirectory(Item07)    #为多态基类声明virtual析构函数
 
-
-
+add_subdirectory(Item09)    #绝不要在构造函数和析构函数中调用虚函数
+add_subdirectory(Item10)    #令operator=返回自身的引用
 add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
 
 
