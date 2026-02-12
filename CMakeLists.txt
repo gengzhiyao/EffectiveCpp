@@ -8,6 +8,15 @@ add_subdirectory(Item01)    #将C++看做是一个语言联邦
 add_subdirectory(Item02)    #尽量以const enum inline 替换define
 add_subdirectory(Item03)    #尽可能使用const
 add_subdirectory(Item04)    #确定对象在使用前已经先初始化
+
+
+
+
+
+
+add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
+
+
 add_subdirectory(Item27)    #尽量少做转型动作
 add_subdirectory(Item28)    #避免返回handles指向对象内部的成分
 
