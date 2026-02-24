@@ -19,7 +19,7 @@ std::string EncryptPassWord ( const std::string& password )
     }
 
     //DoSomething...
-    std::string suitablePositionforEncrypted ( password );
+    std::string suitablePositionforEncrypted ( password );  //延后变量定义式出现的时间
     Encrypt ( suitablePositionforEncrypted );
     // return encrypted;
     return suitablePositionforEncrypted;
