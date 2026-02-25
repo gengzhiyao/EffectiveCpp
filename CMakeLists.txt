@@ -18,7 +18,7 @@ add_subdirectory(Item11)    #在operator=中处理自我赋值
 add_subdirectory(Item12)    #复制对象时切记复制包含基类在内的每个成分
 add_subdirectory(Item13)    #以对象管理资源
 add_subdirectory(Item14)    #在资源管理类中小心copying行为
-
+add_subdirectory(Item15)    #在资源管理类中提供对原始资源的访问
 add_subdirectory(Item16)    #成对使用new和delete时要采取相同的形式
 add_subdirectory(Item17)    #以独立语句将newed对象置入智能指针
 
