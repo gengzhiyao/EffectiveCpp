@@ -22,6 +22,8 @@ add_subdirectory(Item15)    #在资源管理类中提供对原始资源的访问
 add_subdirectory(Item16)    #成对使用new和delete时要采取相同的形式
 add_subdirectory(Item17)    #以独立语句将newed对象置入智能指针
 add_subdirectory(Item18)    #让接口容易被正确使用，不容易被误用
+add_subdirectory(Item19)    #设计class犹如设计type
+
 add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
 
 
