@@ -1,0 +1,1 @@
+add_executable(Item22 main.cpp)

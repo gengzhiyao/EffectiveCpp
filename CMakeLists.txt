@@ -25,7 +25,7 @@ add_subdirectory(Item18)    #让接口容易被正确使用，不容易被误用
 add_subdirectory(Item19)    #设计class犹如设计type
 add_subdirectory(Item20)    #以pass-by-reference-to-const替换pass-by-value
 add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
-
+add_subdirectory(Item22)    #将成员变量声明为private
 
 
 add_subdirectory(Item25)    #考虑写出一个不抛异常的 swap 函数
