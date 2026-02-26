@@ -27,7 +27,7 @@ add_subdirectory(Item20)    #以pass-by-reference-to-const替换pass-by-value
 add_subdirectory(Item21)    #必须返回对象时妄想返回其reference
 add_subdirectory(Item22)    #将成员变量声明为private
 add_subdirectory(Item23)    #以非成员函数和非友元函数替换成员函数
-
+add_subdirectory(Item24)    #若所有形参都需要类型转换，请声明为非成员函数
 add_subdirectory(Item25)    #考虑写出一个不抛异常的 swap 函数
 add_subdirectory(Item26)    #尽可能延后变量定义式的出现时间
 add_subdirectory(Item27)    #尽量少做转型动作
