@@ -37,5 +37,6 @@ add_subdirectory(Item30)    #透彻了解inlining的里里外外
 add_subdirectory(Item31)    #将文件之间的编译依赖关系降至最低
 add_subdirectory(Item32)    #确定public继承塑模出 is-a 关系
 add_subdirectory(Item33)    #避免隐藏继承下来的名称
+add_subdirectory(Item34)    #区分接口继承和实现继承
 
 add_subdirectory(Item36)    #绝不要重新定义继承而来的 non-virtual 函数
