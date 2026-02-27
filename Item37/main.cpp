@@ -25,7 +25,7 @@ public:
 class Rectangle :public Shape
 {
 public:
-    void draw ( ShapeColor color /*= ShapeColor::Green*/ ) const override   // 重新定义缺省参数值是错误的
+    void draw ( ShapeColor color = ShapeColor::Green ) const override   // 重新定义缺省参数值是错误的
     {
         std::cout << "在重新定义默认参数值为绿色后，参数值为：";
         switch ( color )
@@ -57,7 +57,7 @@ int main ()
     std::unique_ptr<Shape> shape ( new Rectangle );
     shape->draw ();     // output: 在重新定义默认参数值为绿色后，参数值为：红色  
     Rectangle rect;
-    // rect.draw ();
+    rect.draw ();    // 通过对象调用，必须给定参数值，这种情况不继承父类的默认参数值
     return 0;
 }
 
