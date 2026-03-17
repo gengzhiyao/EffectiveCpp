@@ -136,7 +136,7 @@ public:
 };
 #pragma endregion
 
-#pragma Replace virtual functions with the traditional strategy pattern.
+#pragma region Replace virtual functions with the traditional strategy pattern.
 class GameCharacter;
 class HealthCalcFunc
 {
@@ -167,6 +167,8 @@ private:
     HealthCalcFunc* pHealthCalcFunc;
 };
 #pragma endregion
+
+
 int main ()
 {
     // 模板方法模式
