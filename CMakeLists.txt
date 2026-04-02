@@ -41,6 +41,6 @@ add_subdirectory(Item34)    #区分接口继承和实现继承
 add_subdirectory(Item35)    #考虑虚函数以外的其他选择
 add_subdirectory(Item36)    #绝不要重新定义继承而来的 non-virtual 函数
 add_subdirectory(Item37)    #绝不要重新定义继承而来的默认参数值
-
+add_subdirectory(Item38)    #通过复合 塑模出 has-a 关系或根据某物实现出
 
 add_subdirectory(Item40)    #明智而审慎的使用多重继承
