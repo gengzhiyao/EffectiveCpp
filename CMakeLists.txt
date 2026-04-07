@@ -44,3 +44,5 @@ add_subdirectory(Item37)    #绝不要重新定义继承而来的默认参数值
 add_subdirectory(Item38)    #通过复合 塑模出 has-a 关系或根据某物实现出
 add_subdirectory(Item39)    #明智而审慎的使用 private 继承
 add_subdirectory(Item40)    #明智而审慎的使用多重继承
+
+add_subdirectory(Item42)    #了解 typename 的双重意义
