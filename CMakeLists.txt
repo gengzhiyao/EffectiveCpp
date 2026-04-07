@@ -46,3 +46,10 @@ add_subdirectory(Item39)    #明智而审慎的使用 private 继承
 add_subdirectory(Item40)    #明智而审慎的使用多重继承
 
 add_subdirectory(Item42)    #了解 typename 的双重意义
+
+
+
+
+
+
+add_subdirectory(Item49)    #了解 new-handler 的行为
