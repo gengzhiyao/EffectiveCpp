@@ -54,3 +54,5 @@ add_subdirectory(Item42) #了解 typename 的双重意义
 
 add_subdirectory(Item49) #了解 new-handler 的行为
 add_subdirectory(Item50) #了解 new和 delete 的合理替换时机
+add_subdirectory(Item51) #编写 new 和 delete 时需固守常规
+add_subdirectory(Item52) #谢了 placement new 也要写 placement delete
