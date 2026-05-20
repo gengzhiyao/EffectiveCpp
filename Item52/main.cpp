@@ -40,13 +40,16 @@ int main( )
      * 3. 如果父类中已经声明了 operator new，那么子类中只要声明了 operator new，不论是何种形式，都会掩盖父类中的 operator new，一定不会发生重载！
      * ! 子类不能跨作用域重载父类同名函数 重载只能发生在同一个作用域里
      * 如果要在类中声明一个 operator new，请注意：除非你就是要阻止用户使用标准形式的 operator new(std::size_t size) 这个版本，否则确保那些标准形式的 operator new 还可用
-     */
+     * 
+     * Notion: 1. 名称查找 > 重载决议  2. 继承 = 拥有成员 ≠ 共享作用域 子类拥有父类的所有成员 但子类和父类是两个独立的作用域
+     */ 
     return 0;
 }
 
 // 确保标准型的 operator delete 也可用
 // 建立一个基类，内含所有的标准形式的 operator new 和 operator delete
 // 凡是想以自定形式扩充标准形式的用户，利用继承以及 using 声明式，取得标准形式
+// using 声明式的作用是：将父类中的特定函数名字引入到子类的当前作用域中。这样，子类自己的 func 和引入的父类 func 就处在同一个作用域，编译器会触发重载，在这一层进行重载决议。
 class StandardNewDeleteForms
 {
 public:
